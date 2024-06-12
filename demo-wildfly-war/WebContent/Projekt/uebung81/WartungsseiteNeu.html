@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Störung melden</title>
+    <link rel="stylesheet" type="text/css" href="stoerungenss.css">
+</head>
+<body>
+    <header>
+        <h1>Hausverwaltung</h1>
+    </header>
+    <nav>
+        <p>
+            Unser Logo
+            <a href="#">Gemein.de</a>
+            <a href="#">Einloggen</a>
+            <a href="#">Registrieren</a>
+            <a href="Startseite.html">Home</a>
+            <a href="StörungenHauptseite.html">Aktuelle Störungen</a>
+        </p>
+    </nav>
+    <main>
+        <h2>Störung melden</h2>
+        <form action="../../StörungsServlet" method="POST" id="störungForm">
+            <label for="wohnung">Wohnung:</label>
+            <select id="wohnung" name="wohnung" required>
+                <option value="" disabled selected>Wählen Sie eine Wohnung</option>
+                <option value="Wohnung 1">Wohnung 1</option>
+                <option value="Wohnung 2">Wohnung 2</option>
+                <option value="Wohnung 3">Wohnung 3</option>
+                <option value="Wohnung 4">Wohnung 4</option>
+                <!-- und so weiter bis Wohnung 20 -->
+            </select>
+            
+            <label for="kategorie">Kategorie der Störung:</label>
+            <select id="kategorie" name="kategorie" required>
+                <option value="Heizung">Heizung</option>
+                <option value="Wasser">Wasser</option>
+                <option value="Elektrik">Elektrik</option>
+                <option value="Sonstiges">Sonstiges</option>
+            </select>
+            
+            <label for="beschreibung">Beschreibung:</label>
+            <textarea id="beschreibung" name="beschreibung" required></textarea>
+            
+            <button type="submit">Störung melden</button>
+        </form>
+    </main>
+</body>
+</html>

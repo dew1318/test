@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Aktuelle Störungen</title>
+    <link rel="stylesheet" type="text/css" href="stoerungenhs.css">
+</head>
+<body>
+    <header>
+        <h1>Aktuelle Störungen</h1>
+    </header>
+    <nav>
+        <p>
+            Unser Logo
+            <a href="#">TEST TEST TEST</a>
+            <a href="#">asd</a>
+            <a href="#">Registrieren</a>
+            <a href="Startseite.html">Home</a>
+            <a href="WartungsseiteNeu.html">Störung melden</a>
+        </p>
+    </nav>
+    <main>
+        <h2>Liste der aktuellen Störungen</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Wohnung</th>
+                    <th>Kategorie</th>
+                    <th>Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody id="störungsliste">
+                <!-- Hier werden die Störungen dynamisch eingefügt -->
+            </tbody>
+        </table>
+        <p>
+            <a href="WartungsseiteNeu.html">Störung melden</a>
+        </p>
+    </main>
+    
+    <script>
+        // Beispielhafte Störungsdaten (dies sollte normalerweise von einem Server geladen werden)
+        var störungen = [
+            {wohnung: 'Wohnung 1', kategorie: 'Heizung', beschreibung: 'Heizung funktioniert nicht'},
+            {wohnung: 'Wohnung 5', kategorie: 'Wasser', beschreibung: 'Wasseraustritt in der Küche'}
+        ];
+
+        // Füge die Störungen zur Tabelle hinzu
+        var störungsliste = document.getElementById('störungsliste');
+        störungen.forEach(function(störung) {
+            var row = document.createElement('tr');
+            row.innerHTML = '<td>' + störung.wohnung + '</td>' + '<td>' + störung.kategorie + '</td>' + '<td>' + störung.beschreibung + '</td>';
+            störungsliste.appendChild(row);
+        });
+    </script>
+</body>
+</html>
+
